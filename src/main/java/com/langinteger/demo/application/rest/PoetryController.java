@@ -20,7 +20,7 @@ public class PoetryController {
   @Autowired
   PoetRepository poetRepo;
 
-  @RequestMapping("/randomPoetry")
+  @RequestMapping("/")
   public String randomPoetry(ModelMap map) {
 
     Poetry poetry = getRandomPoetry();
