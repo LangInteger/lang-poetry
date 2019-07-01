@@ -1,6 +1,6 @@
 # Heroku Deploy Demo
 
-[![Build Status](https://travis-ci.org/LangInteger/lang_poetry.svg?branch=master)](https://travis-ci.org/LangInteger/lang_poetry)
+[![Build Status](https://travis-ci.org/LangInteger/lang-poetry.svg?branch=master)](https://travis-ci.org/LangInteger/lang_poetry)
 
 ## Deploy steps
 
