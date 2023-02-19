@@ -35,7 +35,6 @@ public class Application {
   }
 
   private static Router buildRouter(Vertx vertx) {
-
     Router router = Router.router(vertx);
     router.route("/poetry/*").subRouter(PoetRouter.build(vertx));
 
