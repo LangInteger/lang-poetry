@@ -9,10 +9,10 @@
     <link rel="stylesheet" type="text/css" media="all" href="../static/css/quantangshi.css" th:href="@{/css/quantangshi.css}" />
 </head>
 <body>
-<h2 th:text="${poetry.getTitle()}"></h2>
-<span th:text="${poetry.getPoet().getName()}"></span>
+<h2 th:text="${title}"></h2>
+<span th:text="${poet_name}"></span>
 <p>
-    <p th:each="sentence : ${poetry.getContent().split('。')}">
+    <p th:each="sentence : ${content.split('。')}">
         <span th:text="${sentence}">。</span><br/>
     </p>
 </p>
