@@ -1,10 +1,8 @@
 package com.langinteger.demo.application;
 
-import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 import io.vertx.ext.web.Router;
-import io.vertx.ext.web.templ.thymeleaf.ThymeleafTemplateEngine;
 import java.net.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,9 +20,7 @@ public class Application {
   }
 
   private static void initDatabase() {
-    URL path = ClassLoader.getSystemClassLoader().getResource("sql/data.sqlite");
-    assert path != null;
-    DatabasePoolFactory.init(path.toString());
+    DatabasePoolFactory.init(":resource:database/data.sqlite");
   }
 
   private static void startWebServer(Vertx vertx) {
