@@ -3,6 +3,7 @@ package com.langinteger.demo.application;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 import io.vertx.ext.web.Router;
+import io.vertx.ext.web.handler.StaticHandler;
 import java.net.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +37,7 @@ public class Application {
 
   private static Router buildRouter(Vertx vertx) {
     Router router = Router.router(vertx);
+    router.get("/static/*").handler(StaticHandler.create());
     router.route("/poetry/*").subRouter(PoetRouter.build(vertx));
 
     router.errorHandler(500, ctx -> {
